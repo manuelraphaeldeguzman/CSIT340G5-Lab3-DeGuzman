@@ -28,6 +28,14 @@ const Total = (props) => {
   )
 }
 
+const Footer = (props) => {
+  return (
+    <div>
+      {props.name} - {props.course} - {props.section}
+    </div>
+  )
+}
+
 const App = () => {
   const course = {
     name: 'CSIT340 - Industry Elective 1',
@@ -52,6 +60,11 @@ const App = () => {
       <Header course={course.name} />
       <Content parts={course.parts} />
       <Total total={9} />
+      <Footer 
+        name="Manuel Raphael De Guzman"
+        course="CSIT340"
+        section="G5"
+      />
     </div>
   )
 }
