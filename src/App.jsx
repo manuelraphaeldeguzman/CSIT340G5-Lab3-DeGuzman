@@ -55,11 +55,13 @@ const App = () => {
     ]
   }
 
+  const total = course.parts.reduce((sum, part) => sum + part.units, 0)
+
   return (
     <div>
       <Header course={course.name} />
       <Content parts={course.parts} />
-      <Total total={9} />
+      <Total total={total} />
       <Footer 
         name="Manuel Raphael De Guzman"
         course="CSIT340"
